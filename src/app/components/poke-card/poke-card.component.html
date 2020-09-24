@@ -1,0 +1,15 @@
+<mat-card class="card">
+  <mat-card-header class="header">
+    <mat-card-title>#{{pokeNumber}}</mat-card-title>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <img mat-card-image src="{{pokeImage}}" alt="{{pokeName}}">
+  <mat-card-content class="content">
+    <p>
+      {{pokeName}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="action">
+    <button mat-button><mat-icon aria-hidden="false" aria-label="favorite">star_border</mat-icon></button>
+  </mat-card-actions>
+</mat-card>

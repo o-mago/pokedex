@@ -1,8 +1,27 @@
-<input-component></input-component>
-
-
-
-
+<div class="main">
+  <mat-toolbar class="toolbar">
+    <button mat-button [ngClass]="page > 0 ? 'show' : 'hidden'" (click)="lastPage()">
+      <mat-icon aria-hidden="false" aria-label="favorite">arrow_back_ios</mat-icon>
+    </button>
+    <div>
+      <input-component class="search"></input-component>
+      <button mat-button class="favorite-button">
+        <mat-icon aria-hidden="false" aria-label="favorite">star</mat-icon>
+      </button>
+    </div>
+    <button mat-button [ngClass]="next ? 'show' : 'hidden'" (click)="nextPage()">
+      <mat-icon aria-hidden="false" aria-label="favorite">arrow_forward_ios</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="poke-list">
+    <mat-grid-list *ngIf="pokemons" cols="3">
+      <mat-grid-tile class="poke-item" *ngFor="let poke of pokemons">
+        <poke-card class="poke-card" [pokeName]="poke.viewName" [pokeTypes]="poke.types" [pokeNumber]="poke.number"
+          [pokeImage]="poke.image" (click)="onSelect(poke)"></poke-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
 
 
 

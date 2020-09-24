@@ -10,10 +10,19 @@ export interface Pokemon {
   location_area_encounters: string,
   moves: Array<object>,
   name: string,
-  order: 2,
+  order: number,
   species: object,
   sprites: object,
-  stats: Array<object>,
+  stats: Array<Stats>,
   types: Array<object>,
   weight: number
+}
+
+interface Stats {
+  base_stat: number
+  effort: number
+  stat: {
+    name: string, 
+    url: string
+  }
 }

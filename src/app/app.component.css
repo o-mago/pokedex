@@ -1,0 +1,30 @@
+.poke-card {
+  cursor: pointer;
+  display: flex;
+}
+
+.main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 100px;
+  justify-content: space-between;
+  background: #e84848;
+  color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.favorite-button {
+  margin-left: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
