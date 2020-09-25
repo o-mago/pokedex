@@ -1,4 +1,4 @@
-<mat-form-field class="form-field" floatLabel="auto" color="primary">
+<mat-form-field class="form-field" floatLabel="auto" color="primary" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
   <mat-label>Nome ou número</mat-label>
-  <input matInput type="text">
+  <input matInput type="text" name="input" [formControl]="input">
 </mat-form-field>

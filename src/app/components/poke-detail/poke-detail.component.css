@@ -1,0 +1,70 @@
+.evol {
+  display: flex;
+  flex-direction: row;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+}
+
+.types-container {
+  justify-content: center;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.types-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.poke-image {
+  width: 30%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.poke-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow-container {
+  text-align: center;
+}
+
+.card-types {
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+.arrow {
+  font-size: 2vh;
+}
+
+.evol-image {
+  width: 80%;
+  margin: 0;
+  display: block;
+  margin: auto;
+}
+
+.evol-image-name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

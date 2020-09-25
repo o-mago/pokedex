@@ -13,12 +13,17 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PokeCardComponent } from './components/poke-card/poke-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PokeDetailComponent } from './components/poke-detail/poke-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     PokeCardComponent,
+    PokeDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,11 @@ import { PokeCardComponent } from './components/poke-card/poke-card.component';
     MatButtonModule,
     MatGridListModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

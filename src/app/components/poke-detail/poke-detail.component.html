@@ -1,0 +1,33 @@
+<mat-card class="card">
+  <mat-card-header class="header">
+    <mat-card-title>{{data.viewName}} Nº{{data.number}}</mat-card-title>
+  </mat-card-header>
+  <div class="poke-image-container">
+    <img mat-card-image class="poke-image" src="{{data.image}}" alt="{{data.name}}">
+  </div>
+  <mat-card-content class="content">
+    <mat-grid-list cols="2" rowHeight="{{rowRatio}}:1" (window:resize)="onResize($event)">
+      <mat-grid-tile class="stat" *ngFor="let stat of data.stats">
+        <p>{{stat.stat.name}}: {{stat.base_stat}}</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div class="types-container">
+      <p class="type-label">types:</p>
+      <div class="types">
+        <p *ngFor="let type of data.types" class="card-types">{{type.type.name}}</p>
+      </div>
+    </div>
+    <div class="evol">
+      <div class="img-arrow" *ngFor="let evol of data.evolution.data; last as isLast">
+        <div class="evol-image-name">
+          <p>#{{evol.number}}</p>
+          <img mat-card-image class="evol-image" src="{{evol.image}}" alt="{{evol.name}}">
+          <p>{{evol.viewName}}</p>
+        </div>
+        <div class="arrow-container" *ngIf="!isLast">
+          <mat-icon class="arrow" aria-hidden="false" aria-label="forward">arrow_forward_ios</mat-icon>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

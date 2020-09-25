@@ -11,6 +11,7 @@ export class PokeCardComponent implements OnInit {
   @Input('pokeName') pokeName: string
   @Input('pokeNumber') pokeNumber: number
   @Input('pokeTypes') pokeTypes: Array<any>
+  @Input('load') load: boolean
 
   constructor() { }
 
